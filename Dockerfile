@@ -5,7 +5,7 @@ RUN apt-get update
 
 RUN apt-get install -y postgresql libgmp3-dev zlib1g-dev 
 
-RUN apt-get install -y htop nano
+RUN apt-get install -y htop nano wget ca-certificates
 
 RUN mkdir -p /opt/keter/bin
 RUN mkdir /opt/keter/etc

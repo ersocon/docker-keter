@@ -1,18 +1,22 @@
 version: '2'
 services:
   ersocon-staging:
-    build: .
+    image: ersocon/keter:latest
     restart: always
     container_name: ersocon-keter-staging
     volumes:
       - /srv/docker/keter/ersocon-staging/incoming:/opt/keter/incoming:Z
+      - /srv/docker/keter/ersocon-staging/log:/opt/keter/log:Z
+      - /srv/docker/keter/ersocon-staging/data:/opt/keter/data:Z
     ports:
       - 9897:80
   ersocon-production:
-    build: .
+    image: ersocon/keter:latest
     restart: always
     container_name: ersocon-keter-production
     volumes:
       - /srv/docker/keter/ersocon-production/incoming:/opt/keter/incoming:Z
+      - /srv/docker/keter/ersocon-production/log:/opt/keter/log:Z
+      - /srv/docker/keter/ersocon-production/data:/opt/keter/data:Z
     ports:
       - 9898:80

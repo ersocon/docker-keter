@@ -10,6 +10,7 @@ RUN apt-get install -y htop nano
 RUN mkdir -p /opt/keter/bin
 RUN mkdir /opt/keter/etc
 RUN mkdir /opt/keter/log
+RUN mkdir /opt/keter/data
 
 COPY keter-bin /opt/keter/bin/keter
 COPY keter-config.yaml /opt/keter/etc/keter-config.yaml
